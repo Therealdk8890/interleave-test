@@ -36,6 +36,12 @@ classifiers = [
     "Typing :: Typed",
 ]
 
+[project.urls]
+Homepage = "https://github.com/Therealdk8890/interleave-test"
+Repository = "https://github.com/Therealdk8890/interleave-test"
+Issues = "https://github.com/Therealdk8890/interleave-test/issues"
+Changelog = "https://github.com/Therealdk8890/interleave-test/blob/main/CHANGELOG.md"
+
 [project.optional-dependencies]
 dev = ["pytest>=7"]
 
