@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interleave-test"
+version = "0.1.0"
+description = "Deterministic thread-interleaving fuzzer: loom-style concurrency testing for free-threaded Python"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Danny Kissel" }]
+keywords = [
+    "free-threading",
+    "nogil",
+    "concurrency",
+    "race-condition",
+    "testing",
+    "fuzzing",
+    "interleaving",
+    "loom",
+    "deterministic",
+    "deadlock",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+interleave_test = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
